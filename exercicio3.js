@@ -3,7 +3,7 @@
 
 let botoes = document.querySelectorAll(".botao-expandir-retrair");
 
-for (let botao of botoes) {
+for (const botao of botoes) {
     botao.addEventListener("click", () => {
     botao.parentNode.classList.toggle("expandido");
       if (botao.innerHTML == "+") {
