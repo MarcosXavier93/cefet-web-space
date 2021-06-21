@@ -6,11 +6,13 @@ let botoes = document.querySelectorAll(".botao-expandir-retrair");
 for (const botao of botoes) {
     botao.addEventListener("click", () => {
     botao.parentNode.classList.toggle("expandido");
-      if (botao.innerHTML == "+") {
-        botao.innerHTML = "-"
-      }
-      else {
-        botao.innerHTMl = "+"
-       }
+    if (botao.innerText == "+") {
+        botao.innerText = "-"
+    }
+    else {
+        botao.innerText = "+"
+        }
+  
+        
   });
 }
