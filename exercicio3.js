@@ -12,7 +12,5 @@ for (const botao of botoes) {
     else {
         botao.innerText = "+"
         }
-  
-        
   });
 }
