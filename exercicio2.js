@@ -1,5 +1,27 @@
 // Faça o exercício da GALERIA DE IMAGENS aqui
 // Este arquivo AINDA NÃO ESTÁ INCLUÍDO no arquivo HTML
+document.querySelector("#anterior").addEventListener('click', uptBanner);
+document.querySelector("#proximo").addEventListener('click', uptBanner);
+
+let imagemAtual = 0;
+
+  function uptBanner(e){
+    const contador = e.currentTarget.id == 'proximo' ? 1 : -1;
+    const imagem = document.querySelector('#slide');
+    
+    imagemAtual += contador;
+
+    if (imagemAtual < 0) {
+      imagemAtual = (imagemAtual +1 ) % imagens.length ;
+    
+    } else if (imagemAtual > imagens.length - 1) {
+      imagemAtual = 0;
+   
+    } 
+    
+    imagem.src = servidorDasImagens + '/' + imagens[imagemAtual].arquivo;
+    imagem.alt = imagens[imagemAtual].descricao;
+  }
 
 const servidorDasImagens = 'https://fegemo.github.io/cefet-web/images/osiris';
 const imagens = [
